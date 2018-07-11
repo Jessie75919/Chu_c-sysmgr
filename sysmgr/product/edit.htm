@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head><!--[if lt IE 9]>
+    <script src="../vendors/html5.js"></script><![endif]-->
+        <!-- Mata-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=yes">
+        <link rel="shortcut icon" href="https://www.pavi.com.tw/project/evy/sysmgrv3/sysmgr/sysmgr.ico">
+        <!--標題為動態資料-->
+        <title>PAVI網站管理系統</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../vendors/bootstrap/dist/css/bootstrap.min.css">
+    <!--Font Awesome-icon字體-->
+    <link rel="stylesheet" href="../vendors/font-awesome/css/font-awesome.min.css">
+    <!--NProgress-->
+    <link rel="stylesheet" href="../vendors/nprogress/nprogress.css">
+    <!--iCheck-->
+    <link rel="stylesheet" href="../vendors/iCheck/skins/flat/green.css">
+    <!--switchery-->
+    <link rel="stylesheet" href="../vendors/switchery/dist/switchery.min.css">
+    <!--Custom Theme Style-->
+    <link rel="stylesheet" href="../build/css/share.css">
+  </head>
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <!--側邊選單-->
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div style="border: 0;" class="navbar nav_title"><a href="../index/index.html" class="site_title"><img src="../images/logo.png" alt="後台管理系統 3.0" class="logo"><span>網站管理系統 3.0</span></a></div>
+            <div class="clearfix"></div>
+            <!--sidebar menu-->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menuG1 menu_section">
+                <h3>常用單元</h3>
+                <ul class="nav side-menu">
+                  <li class="mainLink"><a><i class="fa fa-home"></i>首頁管理<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="../homepage/list.html">首頁主圖管理</a></li>
+                    </ul>
+                  </li>
+                  <li class="mainLink"><a><i class="fa fa-newspaper-o"></i>最新消息管理<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="../news/list.html">內容管理</a></li>
+                      <li><a href="../news/cata_list.html">類別管理</a></li>
+                      <li><a href="../news/search.html">搜尋及編輯</a></li>
+                    </ul>
+                  </li>
+                  <li class="mainLink"><a><i class="fa fa-pencil-square-o"></i>關於我們<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="../about/list.html">內容管理</a></li>
+                    </ul>
+                  </li>
+                  <li class="mainLink"><a><i class="fa fa-book"></i>專業知識管理<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="../knowhow/list.html">內容管理</a></li>
+                      <li><a href="../knowhow/search.html">搜尋及編輯</a></li>
+                    </ul>
+                  </li>
+                  <li class="mainLink"><a><i class="fa fa-shopping-cart"></i>營運據點管理<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="../location/list.html">據點管理</a></li>
+                      <li><a href="../location/cata_list.html">區域管理</a></li>
+                      <li><a href="../location/search.html">搜尋及編輯</a></li>
+                    </ul>
+                  </li>
+                  <li class="mainLink"><a><i class="fa fa-envelope"></i>聯絡表單設定<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="../contact/cata_list.html">問題類別</a></li>
+                      <li><a href="../contact/list.html">表單管理</a></li>
+                      <li><a href="../contact/search.html">搜尋及編輯</a></li>
+                      <li><a href="../contact/mail_setting.html">收件mail設定</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="menuG2 menu_section">
+                <h3>特殊單元</h3>
+                <ul class="nav side-menu">
+                  <li class="mainLink"><a><i class="fa fa-th"></i>詳細功能<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="../total/list.html">列表功能一覽</a></li>
+                      <li><a href="../total/list-print.html">可匯出的列表</a></li>
+                      <li><a href="../total/add.html">欄位一覽</a></li>
+                      <li><a href="../total/upload.html">批次上傳圖檔</a></li>
+                      <li><a href="../total/icons.html">圖示一覽</a></li>
+                    </ul>
+                  </li>
+                  <li class="mainLink"><a><i class="fa fa-sitemap"></i>多重選單<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="../total/list.html">選單一</a></li>
+                      <li><a href="#" class="thirdOpen">選單二<span class="fa fa-chevron-down"></span></a>
+                        <dl class="nav child_menu">
+                          <dd><a href="../total/list.html">選單1-1</a></dd>
+                          <dd><a href="../total/list.html">選單1-2</a></dd>
+                          <dd><a href="../total/list.html">選單1-3</a></dd>
+                        </dl>
+                      </li>
+                      <li><a href="../total/list.html">選單三</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--側邊選單結束-->
+        <!--上方選單-->
+        <!--Header-->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle"><a id="menu_toggle"><i class="fa fa-bars"></i></a></div>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="javascript:;" data-toggle="dropdown" aria-expanded="false" class="user-profile dropdown-toggle">百崴管理員<span class="fa fa-angle-down"></span></a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="../myaccount/myaccount.html">我的帳號</a></li>
+                    <li><a href="../admin/list.html">帳號管理</a></li>
+                    <li><a href="../login.html"><i class="fa fa-sign-out pull-right"></i>登出</a></li>
+                  </ul>
+                </li>
+                <li data-toggle="tooltip" data-placement="bottom" title="語系切換"><a href="javascript:;" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle info-number"><i class="glyphicon glyphicon-globe"></i><span>TW</span></a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="#">Engling</a></li>
+                    <li><a href="#">簡體中文</a></li>
+                  </ul>
+                </li>
+                <li data-toggle="tooltip" data-placement="bottom" title="主控台"><a href="../index/index.html"><span class="fa fa-home"></span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!--上方選單結束-->
+        <div role="main" class="right_col">
+          <!--內容-->
+          <div class="page-title">
+            <div class="title_left">
+              <h3>關於我們<small>/ 編輯文章</small></h3>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <form action="list.html#menu=2&amp;sub=0&amp;group=0" class="row formBox form-horizontal form-label-left">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>基本資料</h2><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-2 col-xs-12">文章主題<span class="required">*</span></label>
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                      <input value="經營理念" type="text" required="required" placeholder="請填寫內容" data-parsley-minlength="1" data-parsley-maxlength="50" maxlength="50" class="form-control col-md-7 col-xs-12"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-2 col-xs-12">上線狀態<span class="required">*</span></label>
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                      <input type="checkbox" checked="checked" class="js-switch"/><span></span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-2 col-xs-12">內容<span class="required">*</span></label>
+                    <div class="col-md-12 col-sm-12 col-xs-12 mark">
+                      <ul>
+                        <li>* 上傳檔案之檔名: 請勿包含中文 / 空白 / 特殊符號(例如: &amp;^%%#!)('"&gt;&lt;)，避免瀏覽器無法支援造成破圖或程式執行錯誤情形。</li>
+                        <li>* 上傳檔案之圖檔: 高度請留空白，僅設定寬度即可，避免其他裝置瀏覽時造成圖片變形。</li>
+                        <li>* 上傳檔案之圖檔: 寬度請至少 250px 以上，避免其他裝置瀏覽時造成圖片放大失真。</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-md-12 col-xs-12">
+                      <textarea id="news_content" cols="10" name="news_content" rows="10"></textarea>
+                    </div>
+                  </div>
+                  <!--Ckeditor-->
+                  <!--CK 套件-->
+                  <script type="text/javascript" src="../ck/ckeditor/ckeditor.js"></script>
+                  <script type="text/javascript" src="../ck/ckfinder/ckfinder.js"></script>
+                  <script type="text/javascript" src="../ck/ck.js"></script>
+                </div>
+              </div>
+            </div>
+            <!--功能操作-->
+              <section class="functionBox">
+                <div class="btn-group group0"><a class="btn btn-app collapseBtn"><i class="fa fa-step-forward"></i><span></span></a></div>
+                <div class="btn-group groupC"><a data-toggle="popover" title="單元說明" data-placement="top" data-html="true" data-content="&lt;ul&gt;&lt;li&gt;填入您要新增的資訊。 *為必填欄位。&lt;/li&gt;&lt;li&gt;上傳檔案之檔名: 請勿包含中文 / 空白 / 特殊符號(例如: &amp;^%#!)('&gt;&lt;)，避免瀏覽器無法支援造成破圖或程式執行錯誤情形。&lt;/li&gt;&lt;li&gt;上傳檔案之圖檔: 高度請留空白，僅設定寬度即可，避免其他裝置瀏覽時造成圖片變形。&lt;/li&gt;&lt;li&gt;前後台文章列表頁均以 排序數字 做為排序，由大至小往下排列。&lt;/li&gt;&lt;/ul&gt;" class="btn btn-app"><i class="fa fa-info"></i><span>單元說明</span></a></div>
+                <div class="btn-group groupB"><a class="btn btn-app btnBack"><i class="fa fa-reply"></i><span>回上一頁</span></a>
+                  <button type="submit" class="btn btn-app"><i class="fa fa-save"></i><span>儲存編輯</span></button>
+                </div>
+              </section>
+          </form>
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>更新記錄</h2><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="form-horizontal form-label-left">
+                    <div class="form-group">
+                      <label class="control-label col-md-2 col-sm-2 col-xs-12">修改資訊 :</label>
+                      <div class="col-md-10 col-sm-10 col-xs-12">2014-12-10 PM16:30:48 l 百崴管理者</div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-md-2 col-sm-2 col-xs-12">建立資訊 :</label>
+                      <div class="col-md-10 col-sm-10 col-xs-12">2014-12-10 PM16:30:48 l PAVI</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Footer-->
+          <footer>
+            <div>&copy; 2017 PAVI Digital Tech. Co., Ltd.</div>
+            <div class="clearfix"></div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- 限制IE9以上才能使用--><!--[if lte IE 9]>
+    <script type="text/javascript">location.href = "../upgrade.html";</script><![endif]-->
+    <!-- jQuery-->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap[had css in top]-->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- FastClick-消除手機觸碰的300ms的delay-->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress-網頁讀取進度條[had css in top]-->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!--iCheck-勾選套件 [had css in top]-->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!--Switchery-開關 [had css in top]-->
+    <script src="../vendors/switchery/dist/switchery.min.js"></script>
+    <!--Parsley-表單驗證-->
+    <script src="../vendors/parsleyjs/dist/parsley.min.js"></script>
+    <script src="../vendors/parsleyjs/dist/i18n/zh_tw.js"></script>
+    <!--Custom Scripts-->
+    <script src="../build/js/share.js" charset="UTF-8"></script>
+  </body>
+</html>
