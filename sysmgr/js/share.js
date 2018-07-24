@@ -1,6 +1,6 @@
 var isMenuClosed = false
 
-$(window).load(function () {
+$(window).on('load', function () {
     //側邊主選單
     $('nav > ul > li').click(function () {
         $('nav > ul > li').removeClass('active');
@@ -15,6 +15,7 @@ $(window).load(function () {
     $('.open').click(function () {
         $('aside').stop(true, true).toggleClass('asideClose').removeClass('start');
         $('.container').stop(true, true).toggleClass('full').removeClass('start');
+        $('.editListBtn').stop(true, true).toggleClass('full').removeClass('start');
         if ($(window).width() < 900) {
             $('.closeBg').fadeToggle();
         }
@@ -37,6 +38,7 @@ $(window).load(function () {
     function openMenu() {
         $('aside').removeClass('asideClose');
         $('.container').removeClass('full');
+        $('.editListBtn').removeClass('full');
         $('.closeBg').fadeOut();
     }
 
@@ -44,6 +46,8 @@ $(window).load(function () {
     function closeMenu() {
         $('aside').addClass('asideClose');
         $('.container').addClass('full');
+        $('.editListBtn').addClass('full');
+        
     }
 
 
@@ -84,11 +88,7 @@ $(window).load(function () {
         $('.headerRight > ul > li').removeClass('on');
     })
 
-    //table
-    $('.table-max-height').basictable({
-        tableWrapper: true,
-        forceResponsive: false,
-    })
+    
     
     
 

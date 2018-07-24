@@ -49,7 +49,17 @@
   /*----------其他內容設定----------*/
   .editListBtn {
     width: 94%;
-    right: 3%; } }
+    right: 3%; }
+  @-webkit-keyframes editListBtnNoFull {
+    from {
+      width: 94%; }
+    to {
+      width: 94%; } }
+  @-webkit-keyframes editListBtnFull {
+    from {
+      width: 94%; }
+    to {
+      width: 94%; } } }
 
 @media only screen and (max-width: 600px) {
   /*header*/
@@ -61,4 +71,10 @@
       header .headerRight > ul > li a > span {
         display: none; }
       header .headerRight > ul > li a > span.remind {
-        display: block; } }
+        display: block; }
+  /*----------其他內容設定----------*/
+  /*表單*/
+  .formList .formName {
+    width: 100%; }
+  .formList .formInfo {
+    width: 100%; } }
