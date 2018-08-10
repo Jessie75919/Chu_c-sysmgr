@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>sideNav</title>
+    <title>網站管理系統</title>
+    <link rel="SHORTCUT ICON" href="../images/share/favicon.ico" />
+    <link rel="icon" href="../images/share/favicon.ico" type="image/ico" />
     <!--css-->
     <link href="../css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
     <link href="../css/default.css" rel="stylesheet" type="text/css" />
-    <link href="../css/default_mobile.css" rel="stylesheet" type="text/css" />
-    <link href="../css/animate.css" rel="stylesheet" type="text/css" />
     <link href="../css/switchery.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <!--header 拆成共用-->
     <header>
-        <figure class="logo"><a href="../index/index.htm"><img src="../images/share/logo.svg" alt="CHU.C" title="CHU.C"></a></figure>
+        <figure class="logo">
+            <a href="../index/index.htm"><img src="../images/share/logo.svg" alt="CHU.C" title="CHU.C"></a>
+        </figure>
         <div class="open"><i class="fas fa-bars" title="MENU"></i></div>
         <!--上方選單-->
         <div class="headerRight">
@@ -59,9 +61,8 @@
                     </li>
                     <li class="active"><a href="#"><i class="fas fa-shopping-cart"></i>商品管理</a><span>more</span>
                         <ul class="dropdown">
-                            <li><a href="../product/list.htm">內容管理</a></li>
+                            <li><a class="on" href="../product/list.htm">內容管理</a></li>
                             <li><a href="../product/cata-list.htm">類別管理</a></li>
-                            <li><a href="../product/search.htm">搜尋</a></li>
                         </ul>
                     </li>
                     <li><a href="#"><i class="fas fa-newspaper"></i>新聞管理</a><span>more</span>
@@ -91,19 +92,18 @@
             <h1>商品管理<span> / 內容管理</span></h1>
             <div class="panel">
                 <div class="panelBody bt-wrapper">
-                    <h2>單元列表一覽</h2>
+                    <h2>商品列表一覽</h2>
                     <!--編輯按鈕區塊-->
                     <div class="editListBtn">
                         <a href="add.htm"><i class="fas fa-plus"></i>新增內容</a>
                         <a href="#"><i class="fas fa-redo-alt"></i>更新排序</a>
                         <a href="#"><i class="fas fa-trash-alt"></i>刪除勾選</a>
-                        
                     </div>
                     <!--編輯按鈕區塊 end-->
                     <!--搜尋商品狀態-->
                     <div class="stuts">
                         <div class="stutsList">
-                            上線狀態
+                            <span>上線狀態</span>
                             <select name="onlineStuts" id="onlineStuts">
                                 <option value="all">全部</option>
                                 <option value="on">上線中</option>
@@ -111,7 +111,7 @@
                             </select>
                         </div>
                         <div class="stutsList">
-                            選擇類別
+                            <span>選擇類別</span>
                             <select name="onlineStuts" id="onlineStuts">
                                 <option value="0">全部</option>
                                 <option value="1">項鍊</option>
@@ -122,10 +122,10 @@
                             </select>
                         </div>
                         <div class="stutsList">
-                            關鍵字
+                            <span>關鍵字</span>
                             <input type="text" name="keyword" id="keyword">
                         </div>
-                        <div class="stutsList">
+                        <div class="stutsList sendBtn">
                             <input type="button" value="送出">
                         </div>
                     </div>
@@ -134,11 +134,15 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th><input id="checkbox" type="checkbox" name="checkbox"></th>
+                                    <th>
+                                        <input id="checkbox" type="checkbox" name="checkbox">
+                                    </th>
                                     <th>排序</th>
                                     <th>縮圖</th>
                                     <th>品名</th>
+                                    <th>價格</th>
                                     <th>類別</th>
+                                    <th>首頁顯示</th>
                                     <th>狀態</th>
                                     <th>功能</th>
                                 </tr>
@@ -146,49 +150,119 @@
                             <tbody>
                                 <!--列表每頁10則-->
                                 <tr>
-                                    <td><input id="checkbox" type="checkbox" name="checkbox"></td>
-                                    <td><input type="text" value="1"></td>
+                                    <td>
+                                        <input id="checkbox" type="checkbox" name="checkbox">
+                                    </td>
+                                    <td>
+                                        <input type="text" value="1">
+                                    </td>
                                     <td><img src="../../shop-upload/shop001/product/p_20180709001.jpg"></td>
                                     <td>你好!小浣熊童趣乾燥花耳環</td>
+                                    <td>350</td>
                                     <td>耳環</td>
-                                    <td><input type="checkbox" class="js-switch" /></td>
-                                    <td><a class="btn circle" href="edit.htm" title="編輯"><i class="fas fa-edit"></i></a><a class="btn circle" href="#" title="複製"><i class="fas fa-clone"></i></a><a class="btn circle" href="#" title="刪除"><i class="fas fa-trash-alt"></i></a></td>
+                                    <td>
+                                        <input type="checkbox" class="js-switch" />
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="js-switch" />
+                                    </td>
+                                    <td>
+                                        <a class="btn circle" href="edit.htm" title="編輯"><i class="fas fa-edit"></i></a>
+                                        <a class="btn circle" href="#" title="複製"><i class="fas fa-clone"></i></a>
+                                        <a class="btn circle" href="#" title="刪除"><i class="fas fa-trash-alt"></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><input id="checkbox" type="checkbox" name="checkbox"></td>
-                                    <td><input type="text" value="2"></td>
+                                    <td>
+                                        <input id="checkbox" type="checkbox" name="checkbox">
+                                    </td>
+                                    <td>
+                                        <input type="text" value="2">
+                                    </td>
                                     <td><img src="../../shop-upload/shop001/product/p_20180709002.jpg"></td>
                                     <td>層層疊疊乾燥花耳環</td>
+                                    <td>350</td>
                                     <td>耳環</td>
-                                    <td><input type="checkbox" class="js-switch" checked /></td>
-                                    <td><a class="btn circle" href="edit.htm" title="編輯"><i class="fas fa-edit"></i></a><a class="btn circle" href="#" title="複製"><i class="fas fa-clone"></i></a><a class="btn circle" href="#" title="刪除"><i class="fas fa-trash-alt"></i></a></td>
+                                    <td>
+                                        <input type="checkbox" class="js-switch" />
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="js-switch" checked />
+                                    </td>
+                                    <td>
+                                        <a class="btn circle" href="edit.htm" title="編輯"><i class="fas fa-edit"></i></a>
+                                        <a class="btn circle" href="#" title="複製"><i class="fas fa-clone"></i></a>
+                                        <a class="btn circle" href="#" title="刪除"><i class="fas fa-trash-alt"></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><input id="checkbox" type="checkbox" name="checkbox"></td>
-                                    <td><input type="text" value="1"></td>
+                                    <td>
+                                        <input id="checkbox" type="checkbox" name="checkbox">
+                                    </td>
+                                    <td>
+                                        <input type="text" value="1">
+                                    </td>
                                     <td><img src="../../shop-upload/shop001/product/p_20180709001.jpg"></td>
                                     <td>你好!小浣熊童趣乾燥花耳環</td>
+                                    <td>350</td>
                                     <td>耳環</td>
-                                    <td><input type="checkbox" class="js-switch" /></td>
-                                    <td><a class="btn circle" href="edit.htm" title="編輯"><i class="fas fa-edit"></i></a><a class="btn circle" href="#" title="複製"><i class="fas fa-clone"></i></a><a class="btn circle" href="#" title="刪除"><i class="fas fa-trash-alt"></i></a></td>
+                                    <td>
+                                        <input type="checkbox" class="js-switch" />
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="js-switch" />
+                                    </td>
+                                    <td>
+                                        <a class="btn circle" href="edit.htm" title="編輯"><i class="fas fa-edit"></i></a>
+                                        <a class="btn circle" href="#" title="複製"><i class="fas fa-clone"></i></a>
+                                        <a class="btn circle" href="#" title="刪除"><i class="fas fa-trash-alt"></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><input id="checkbox" type="checkbox" name="checkbox"></td>
-                                    <td><input type="text" value="2"></td>
+                                    <td>
+                                        <input id="checkbox" type="checkbox" name="checkbox">
+                                    </td>
+                                    <td>
+                                        <input type="text" value="2">
+                                    </td>
                                     <td><img src="../../shop-upload/shop001/product/p_20180709002.jpg"></td>
                                     <td>層層疊疊乾燥花耳環</td>
+                                    <td>350</td>
                                     <td>耳環</td>
-                                    <td><input type="checkbox" class="js-switch" checked /></td>
-                                    <td><a class="btn circle" href="edit.htm" title="編輯"><i class="fas fa-edit"></i></a><a class="btn circle" href="#" title="複製"><i class="fas fa-clone"></i></a><a class="btn circle" href="#" title="刪除"><i class="fas fa-trash-alt"></i></a></td>
+                                    <td>
+                                        <input type="checkbox" class="js-switch" />
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="js-switch" checked />
+                                    </td>
+                                    <td>
+                                        <a class="btn circle" href="edit.htm" title="編輯"><i class="fas fa-edit"></i></a>
+                                        <a class="btn circle" href="#" title="複製"><i class="fas fa-clone"></i></a>
+                                        <a class="btn circle" href="#" title="刪除"><i class="fas fa-trash-alt"></i></a>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><input id="checkbox" type="checkbox" name="checkbox"></td>
-                                    <td><input type="text" value="2"></td>
+                                    <td>
+                                        <input id="checkbox" type="checkbox" name="checkbox">
+                                    </td>
+                                    <td>
+                                        <input type="text" value="2">
+                                    </td>
                                     <td><img src="../../shop-upload/shop001/product/p_20180709002.jpg"></td>
                                     <td>層層疊疊乾燥花耳環</td>
+                                    <td>350</td>
                                     <td>耳環</td>
-                                    <td><input type="checkbox" class="js-switch" checked /></td>
-                                    <td><a class="btn circle" href="edit.htm" title="編輯"><i class="fas fa-edit"></i></a><a class="btn circle" href="#" title="複製"><i class="fas fa-clone"></i></a><a class="btn circle" href="#" title="刪除"><i class="fas fa-trash-alt"></i></a></td>
+                                    <td>
+                                        <input type="checkbox" class="js-switch" />
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" class="js-switch" checked />
+                                    </td>
+                                    <td>
+                                        <a class="btn circle" href="edit.htm" title="編輯"><i class="fas fa-edit"></i></a>
+                                        <a class="btn circle" href="#" title="複製"><i class="fas fa-clone"></i></a>
+                                        <a class="btn circle" href="#" title="刪除"><i class="fas fa-trash-alt"></i></a>
+                                    </td>
                                 </tr>
                                 <!--列表每頁10則 end-->
                             </tbody>
@@ -197,7 +271,19 @@
                     <!--頁碼-->
                     <div class="page">
                         <p>共 2 頁 / 總共 16 筆記錄</p>
-                        <p><a href="#"><i class="fas fa-angle-left"></i></a><a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a><a href="#">10</a><a href="#"><i class="fas fa-angle-right"></i></a></p>
+                        <p>
+                            <a href="#"><i class="fas fa-angle-left"></i></a>
+                            <a href="#">1</a><a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                            <a href="#"><i class="fas fa-angle-right"></i></a>
+                        </p>
                     </div>
 
                 </div>

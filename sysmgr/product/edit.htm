@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>sideNav</title>
+    <title>網站管理系統</title>
+    <link rel="SHORTCUT ICON" href="../images/share/favicon.ico" />
+    <link rel="icon" href="../images/share/favicon.ico" type="image/ico" />
     <!--css-->
     <link href="../css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
     <link href="../css/default.css" rel="stylesheet" type="text/css" />
-    <link href="../css/default_mobile.css" rel="stylesheet" type="text/css" />
     <link href="../css/switchery.css" rel="stylesheet" type="text/css" />
     <link href="../css/dropzone.css" rel="stylesheet" type="text/css" />
     <link href="../css/jquery.tag-editor.css" rel="stylesheet" type="text/css" />
@@ -17,7 +18,9 @@
 <body>
     <!--header 拆成共用-->
     <header>
-        <figure class="logo"><a href="../index/index.htm"><img src="../images/share/logo.svg" alt="CHU.C" title="CHU.C"></a></figure>
+        <figure class="logo">
+            <a href="../index/index.htm"><img src="../images/share/logo.svg" alt="CHU.C" title="CHU.C"></a>
+        </figure>
         <div class="open"><i class="fas fa-bars" title="MENU"></i></div>
         <!--上方選單-->
         <div class="headerRight">
@@ -60,9 +63,8 @@
                     </li>
                     <li class="active"><a href="#"><i class="fas fa-shopping-cart"></i>商品管理</a><span>more</span>
                         <ul class="dropdown">
-                            <li><a href="../product/list.htm">內容管理</a></li>
+                            <li><a class="on" href="../product/list.htm">內容管理</a></li>
                             <li><a href="../product/cata-list.htm">類別管理</a></li>
-                            <li><a href="../product/search.htm">搜尋</a></li>
                         </ul>
                     </li>
                     <li><a href="#"><i class="fas fa-newspaper"></i>新聞管理</a><span>more</span>
@@ -92,21 +94,49 @@
                 <div class="panelBody bt-wrapper">
                     <h2>基本資料</h2>
                     <!--編輯按鈕區塊-->
-                    <div class="editListBtn start"><a href="list.htm"><i class="fas fa-reply"></i>回上一頁</a><a href="#"><i class="fas fa-edit"></i>確認編輯</a></div>
+                    <div class="editListBtn start">
+                        <a href="list.htm"><i class="fas fa-reply"></i>回上一頁</a>
+                        <a href="#"><i class="fas fa-edit"></i>確認編輯</a>
+                    </div>
                     <!--編輯按鈕區塊 end-->
                     <!--新增商品資訊-->
                     <form action="list.htm" method="post" id="formcontent">
                         <div class="formList">
                             <div class="formName">商品名稱<span class="mark">*</span></div>
-                            <div class="formInfo"><input type="text" name="name" id="name" value="CHU.C 啾囍 | 層層疊疊乾燥花耳環"></div>
+                            <div class="formInfo">
+                                <input type="text" name="name" id="name" value="CHU.C 啾囍 | 層層疊疊乾燥花耳環">
+                            </div>
+                        </div>
+                        <div class="formList">
+                            <div class="formName">商品價格<span class="mark">*</span></div>
+                            <div class="formInfo">
+                                <input type="text" name="price" id="price">
+                            </div>
                         </div>
                         <div class="formList">
                             <div class="formName">所屬類別<span class="mark">*</span></div>
-                            <div class="formInfo"><select name="selectItem" class="validate[required]"><option value="" selected>請選擇</option><option value="1" selected>耳環</option><option value="2">項鍊</option><option value="3">手鍊</option><option value="4">髮飾</option><option value="5">鑰匙圈</option></select></div>
+                            <div class="formInfo">
+                                <select name="selectItem" class="validate[required]">
+                                    <option value="" selected>請選擇</option>
+                                    <option value="1" selected>耳環</option>
+                                    <option value="2">項鍊</option>
+                                    <option value="3">手鍊</option>
+                                    <option value="4">髮飾</option>
+                                    <option value="5">鑰匙圈</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="formList">
                             <div class="formName">上線狀態<span class="mark">*</span></div>
-                            <div class="formInfo"><input type="checkbox" class="js-switch" checked /></div>
+                            <div class="formInfo">
+                                <input type="checkbox" class="js-switch" checked />
+                            </div>
+                        </div>
+                        <div class="formList">
+                            <div class="formName">首頁顯示<span class="mark">*</span></div>
+                            <div class="formInfo">
+                                <input type="checkbox" class="js-switch" checked />
+                            </div>
                         </div>
                         <div class="formList">
                             <div class="formName">已上傳圖檔<span class="mark">*</span></div>
@@ -159,11 +189,12 @@
                             </div>
                         </div>
                         <div class="editorArea">
-                            <!--ck editor--><textarea name="ckeditor" id="ckeditor" class="ckeditor" rows="10" cols="10">
-                            <p>CHU.C Handmade 啾囍</p>
-                            <p>FLOWERS X ACCESSORY，</p>
-                            <p>喜歡花花草草，喜歡手作，</p>
-                            <p>喜歡創作會讓人感受到溫暖與幸福的作品。</p>
+                            <!--ck editor-->
+                            <textarea name="ckeditor" id="ckeditor" class="ckeditor" rows="10" cols="10">
+                                <p>CHU.C Handmade 啾囍</p>
+                                <p>FLOWERS X ACCESSORY，</p>
+                                <p>喜歡花花草草，喜歡手作，</p>
+                                <p>喜歡創作會讓人感受到溫暖與幸福的作品。</p>
                             </textarea>
                             <!--ck editor end-->
                         </div>

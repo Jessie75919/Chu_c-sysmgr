@@ -9,7 +9,6 @@ $(window).on('load', function () {
             $(this).find('ul').slideDown();
             $(this).addClass('active');
         }
-        
     })
 
     $('.open').click(function () {
@@ -47,7 +46,7 @@ $(window).on('load', function () {
         $('aside').addClass('asideClose');
         $('.container').addClass('full');
         $('.editListBtn').addClass('full');
-        
+
     }
 
 
@@ -80,7 +79,7 @@ $(window).on('load', function () {
         if ($(this).children('ul').length == 0) {
             $(this).removeClass('on');
         }
-
+        
     })
 
     $('main').click(function () {
@@ -88,8 +87,8 @@ $(window).on('load', function () {
         $('.headerRight > ul > li').removeClass('on');
     })
 
-    
-    
-    
+
+
+
 
 })
