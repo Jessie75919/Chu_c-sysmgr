@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>網站管理系統</title>
+    <link rel="SHORTCUT ICON" href="../images/share/favicon.ico" />
+    <link rel="icon" href="../images/share/favicon.ico" type="image/ico" />
+    <!--css-->
+    <link href="../css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/default.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!--header 拆成共用-->
+    <header>
+        <figure class="logo">
+            <a href="../index/index.htm"><img src="../images/share/logo.svg" alt="CHU.C" title="CHU.C"></a>
+        </figure>
+        <div class="open"><i class="fas fa-bars" title="MENU"></i></div>
+        <!--上方選單-->
+        <div class="headerRight">
+            <ul>
+                <li class="account"><a href="#" title="帳號"><i class="fas fa-user-circle"></i><span>Jackie Kuo<i class="fas fa-angle-down"></i></span></a>
+                    <ul>
+                        <li><a href="../account/account.htm" target="_blank">我的帳號</a></li>
+                        <li><a href="../admin/list.htm">帳號管理</a></li>
+                        <li><a href="#">登出<i class="fas fa-sign-out-alt"></i></a></li>
+                    </ul>
+                </li>
+                <li class="language"><a href="#" title="語言"><i class="fas fa-globe"></i><span>繁中<i class="fas fa-angle-down"></i></span></a>
+                    <ul>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">日本語</a></li>
+                    </ul>
+                </li>
+                <li><a href="../contact/list.htm"><i class="fas fa-envelope"></i><span class="remind">10</span></a></li>
+            </ul>
+        </div>
+        <!--上方選單 end-->
+    </header>
+    <!--header end-->
+    <main>
+        <!--側邊攔 拆成共用-->
+        <aside class="start">
+            <nav>
+                <p>常用單元</p>
+                <ul>
+                    <!--所在的類別li要加上class="active"-->
+                    <li><a href="#"><i class="fas fa-home"></i>首頁管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../homepage/list.htm">首頁主圖管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i>商品管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../product/list.htm">內容管理</a></li>
+                            <li><a href="../product/cata-list.htm">類別管理</a></li>
+                            <li><a href="../product/notice-edit.htm">貼心提醒管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="active"><a href="#"><i class="fas fa-shopping-cart"></i>購物管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a class="on" href="../order/list.htm">訂單列表</a></li>
+                            <li><a href="../order/shipping-list.htm">物流設定</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-newspaper"></i>新聞管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../news/list.htm">內容管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i>部落格管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../blog/list.htm">內容管理</a></li>
+                            <li><a href="../blog/cata-list.htm">類別管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i>常見問題管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../faq/list.htm">內容管理</a></li>
+                            <li><a href="../faq/cata-list.htm">類別管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-envelope"></i>聯絡表單管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../contact/list.htm">表單管理</a></li>
+                            <li><a href="../contact/cata_list.htm">問題類別</a></li>
+                            <li><a href="../contact/mail_setting.htm">系統信設定</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-user"></i>會員管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../member/list.htm">會員列表</a></li>
+                            <li><a href="../member/search.htm">會員查詢</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="closeBg"></div>
+        <!--側邊攔 end-->
+        <div class="container start">
+            <!--主要內容-->
+            <h1>購物管理<span> / 訂單內容</span></h1>
+            <div class="panel">
+                <div class="panelBody">
+                    <h2>訂單資料</h2>
+                    <!--編輯按鈕區塊-->
+                    <div class="editListBtn start">
+                        <a href="list.htm"><i class="fas fa-reply"></i>回上一頁</a>
+                        <a href="#"><i class="fas fa-edit"></i>確認編輯</a>
+                    </div>
+                    <!--編輯按鈕區塊 end-->
+                    <!--新增商品資訊-->
+                    <form action="list.htm" method="post" id="formcontent">
+                        <div class="formList">
+                            <div class="formName">訂單編號</div>
+                            <div class="formInfo">aa000012</div>
+                        </div>
+                        <div class="formList">
+                            <div class="formName">訂單日期</div>
+                            <div class="formInfo">2018-08-15</div>
+                        </div>
+                        <div class="formList">
+                            <div class="formName">訂單狀態<span class="mark">*</span></div>
+                            <div class="formInfo">
+                                <select name="selectItem" class="validate[required]">
+                                    <option value="0">新訂單</option>
+                                    <option value="1">處理中</option>
+                                    <option value="2">已取消</option>
+                                    <option value="3">已出貨</option>
+                                    <option value="4">取貨完成</option>
+                                    <option value="5">退貨</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="formList">
+                            <div class="formName">付款狀態<span class="mark">*</span></div>
+                            <div class="formInfo">
+                                <select name="selectItem" class="validate[required]">
+                                    <option value="1">已付款</option>
+                                    <option value="2">尚未付款</option>
+                                    <option value="3">貨到付款</option>
+                                    <option value="4">付款失敗</option>
+                                    <option value="5">已退款</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="formList">
+                            <div class="formName">物流方式<span class="mark">*</span></div>
+                            <div class="formInfo">
+                                <select name="selectItem" class="validate[required]">
+                                    <option value="1">宅配</option>
+                                    <option value="2">郵寄</option>
+                                    <option value="3">7-11取貨</option>
+                                    <option value="4">全家取貨</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panelBody">
+                    <h2>訂購人資訊</h2>
+                    <div class="formList">
+                        <div class="formName">姓名</div>
+                        <div class="formInfo">郭庭羽</div>
+                    </div>
+                    <div class="formList">
+                        <div class="formName">電話</div>
+                        <div class="formInfo">0922-526-182</div>
+                    </div>
+                    <div class="formList">
+                        <div class="formName">E-Mail</div>
+                        <div class="formInfo">juicekuo@gmail.com</div>
+                    </div>
+                    <div class="formList">
+                        <div class="formName">地址</div>
+                        <div class="formInfo">台北市民權東路二段91巷8弄5號2樓的豪宅</div>
+                    </div>
+                    <div class="formList">
+                        <div class="formName">發票型態</div>
+                        <div class="formInfo">電子發票 (統編: 27716865 ) </div>
+                    </div>
+                </div>
+                <div class="panelBody">
+                    <h2>收件人資訊</h2>
+                    <div class="formList">
+                        <div class="formName">姓名</div>
+                        <div class="formInfo">郭庭羽</div>
+                    </div>
+                    <div class="formList">
+                        <div class="formName">電話</div>
+                        <div class="formInfo">0922-526-182</div>
+                    </div>
+                    <div class="formList">
+                        <div class="formName">E-Mail</div>
+                        <div class="formInfo">juicekuo@gmail.com</div>
+                    </div>
+                    <div class="formList">
+                        <div class="formName">收件地址</div>
+                        <div class="formInfo">台北市民權東路二段91巷8弄5號2樓的豪宅</div>
+                    </div>
+                    <div class="formList">
+                        <div class="formName">備註</div>
+                        <div class="formInfo">我很大牌只有星期六可以收件</div>
+                    </div>
+                </div>
+                <div class="panelBody">
+                    <h2>訂購商品項目</h2>
+                    <div class="rwdTable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>縮圖</th>
+                                    <th>品名</th>
+                                    <th>數量</th>
+                                    <th>單價</th>
+                                    <th>總計</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--列表-->
+                                <tr>
+                                    <td><img src="../../shop-upload/shop001/product/p_20180709001.jpg"></td>
+                                    <td>你好!小浣熊童趣乾燥花耳環</td>
+                                    <td>1</td>
+                                    <td>350</td>
+                                    <td>350</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../../shop-upload/shop001/product/p_20180709002.jpg"></td>
+                                    <td>層層疊疊乾燥花耳環</td>
+                                    <td>1</td>
+                                    <td>350</td>
+                                    <td>350</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="../../shop-upload/shop001/product/p_20180709001.jpg"></td>
+                                    <td>你好!小浣熊童趣乾燥花耳環</td>
+                                    <td>1</td>
+                                    <td>350</td>
+                                    <td>350</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5"><strong>商品總計:$1050</strong></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5"><strong>+ 運費:$60</strong></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5"><strong>總金額:$1110</strong></td>
+                                </tr>
+                                <!--列表 end-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--主要內容 end-->
+            <!--footer 拆成共用-->
+            <footer>©CHU.C 啾囍 All Rights Reserved.</footer>
+            <!--footer end-->
+            <!--main js-->
+        </div>
+    </main>
+    <!--[if lt IE 8]><script type="text/javascript" src="../js/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/SmoothScroll_v1.2.1.js"></script>
+    <script type="text/javascript" src="../js/share.js"></script>
+</body>
+
+</html>

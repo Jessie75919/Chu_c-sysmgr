@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>網站管理系統</title>
+    <link rel="SHORTCUT ICON" href="../images/share/favicon.ico" />
+    <link rel="icon" href="../images/share/favicon.ico" type="image/ico" />
+    <!--css-->
+    <link href="../css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/default.css" rel="stylesheet" type="text/css" />
+    <link href="../css/switchery.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!--header 拆成共用-->
+    <header>
+        <figure class="logo">
+            <a href="../index/index.htm"><img src="../images/share/logo.svg" alt="CHU.C" title="CHU.C"></a>
+        </figure>
+        <div class="open"><i class="fas fa-bars" title="MENU"></i></div>
+        <!--上方選單-->
+        <div class="headerRight">
+            <ul>
+                <li class="account"><a href="#" title="帳號"><i class="fas fa-user-circle"></i><span>Jackie Kuo<i class="fas fa-angle-down"></i></span></a>
+                    <ul>
+                        <li><a href="../account/account.htm" target="_blank">我的帳號</a></li>
+                        <li><a href="../admin/list.htm">帳號管理</a></li>
+                        <li><a href="#">登出<i class="fas fa-sign-out-alt"></i></a></li>
+                    </ul>
+                </li>
+                <li class="language"><a href="#" title="語言"><i class="fas fa-globe"></i><span>繁中<i class="fas fa-angle-down"></i></span></a>
+                    <ul>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">日本語</a></li>
+                    </ul>
+                </li>
+                <li><a href="../contact/list.htm"><i class="fas fa-envelope"></i><span class="remind">10</span></a></li>
+            </ul>
+        </div>
+        <!--上方選單 end-->
+    </header>
+    <!--header end-->
+    <main>
+        <!--側邊攔 拆成共用-->
+        <aside class="start">
+            <nav>
+                <p>常用單元</p>
+                <ul>
+                    <!--所在的類別li要加上class="active"-->
+                    <li><a href="#"><i class="fas fa-home"></i>首頁管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../homepage/list.htm">首頁主圖管理</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i>商品管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../product/list.htm">內容管理</a></li>
+                            <li><a href="../product/cata-list.htm">類別管理</a></li>
+                            <li><a href="../product/notice-edit.htm">貼心提醒管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="active"><a href="#"><i class="fas fa-shopping-cart"></i>購物管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../order/list.htm">訂單列表</a></li>
+                            <li><a class="on" href="../order/shipping-list.htm">物流設定</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-newspaper"></i>新聞管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../news/list.htm">內容管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i>部落格管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../blog/list.htm">內容管理</a></li>
+                            <li><a href="../blog/cata-list.htm">類別管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i>常見問題管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../faq/list.htm">內容管理</a></li>
+                            <li><a href="../faq/cata-list.htm">類別管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-envelope"></i>聯絡表單管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../contact/list.htm">表單管理</a></li>
+                            <li><a href="../contact/cata_list.htm">問題類別</a></li>
+                            <li><a href="../contact/mail_setting.htm">系統信設定</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-user"></i>會員管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../member/list.htm">會員列表</a></li>
+                            <li><a href="../member/search.htm">會員查詢</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="closeBg"></div>
+        <!--側邊攔 end-->
+        <div class="container start">
+            <!--主要內容-->
+            <h1>購物管理<span> / 編輯物流</span></h1>
+            <div class="panel">
+                <div class="panelBody">
+                    <h2>基本資料</h2>
+                    <!--編輯按鈕區塊-->
+                    <div class="editListBtn start">
+                        <a href="shipping-list.htm"><i class="fas fa-reply"></i>回上一頁</a>
+                        <a href="#"><i class="fas fa-edit"></i>確認新增</a></div>
+                    <!--編輯按鈕區塊 end-->
+                    <!--新增商品資訊-->
+                    <form action="shipping-list.htm" method="post" id="formcontent">
+                        <div class="formList">
+                            <div class="formName">物流名稱<span class="mark">*</span></div>
+                            <div class="formInfo">
+                                <input type="text" name="name" id="name" value="宅配">
+                            </div>
+                        </div>
+                        <div class="formList">
+                            <div class="formName">運費<span class="mark">*</span></div>
+                            <div class="formInfo">
+                                <input type="text" name="price" id="price" value="60">
+                            </div>
+                        </div>
+                        <div class="formList">
+                            <div class="formName">上線狀態<span class="mark">*</span></div>
+                            <div class="formInfo">
+                                <input type="checkbox" class="js-switch" checked />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--主要內容 end-->
+            <!--footer 拆成共用-->
+            <footer>©CHU.C 啾囍 All Rights Reserved.</footer>
+            <!--footer end-->
+            <!--main js-->
+        </div>
+    </main>
+    <!--[if lt IE 8]><script type="text/javascript" src="../js/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/SmoothScroll_v1.2.1.js"></script>
+    <script src="../js/switchery.min.js"></script>
+    <script type="text/javascript" src="../js/share.js"></script>
+    <script>
+        /*狀態按鈕*/
+        var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+        elems.forEach(function(html) {
+            var switchery = new Switchery(html);
+        });
+
+    </script>
+</body>
+
+</html>

@@ -10,14 +10,15 @@
     <!--css-->
     <link href="../css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
     <link href="../css/default.css" rel="stylesheet" type="text/css" />
-    <link href="../css/animate.css" rel="stylesheet" type="text/css" />
-    <link href="../css/basictable.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
     <!--header 拆成共用-->
     <header>
-        <figure class="logo"><a href="../index/index.htm"><img src="../images/share/logo.svg" alt="CHU.C" title="CHU.C"></a></figure>
+        <figure class="logo">
+            <a href="../index/index.htm"><img src="../images/share/logo.svg" alt="CHU.C" title="CHU.C"></a>
+        </figure>
         <div class="open"><i class="fas fa-bars" title="MENU"></i></div>
         <!--上方選單-->
         <div class="headerRight">
@@ -50,34 +51,50 @@
                     <!--所在的類別li要加上class="active"-->
                     <li><a href="#"><i class="fas fa-home"></i>首頁管理</a><span>more</span>
                         <ul class="dropdown">
-                            <li><a href="#">首頁主圖管理</a></li>
+                            <li><a href="../homepage/list.htm">首頁主圖管理</a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><i class="fas fa-image"></i>單元主圖管理</a><span>more</span>
-                        <ul class="dropdown">
-                            <li><a href="#">圖片列表</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><i class="fas fa-shopping-cart"></i>商品管理</a><span>more</span>
+                    <li><a href="#"><i class="fas fa-shopping-bag"></i>商品管理</a><span>more</span>
                         <ul class="dropdown">
                             <li><a href="../product/list.htm">內容管理</a></li>
                             <li><a href="../product/cata-list.htm">類別管理</a></li>
+                            <li><a href="../product/notice-edit.htm">貼心提醒管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i>購物管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../order/list.htm">訂單列表</a></li>
+                            <li><a href="../order/shipping-list.htm">物流設定</a></li>
                         </ul>
                     </li>
                     <li><a href="#"><i class="fas fa-newspaper"></i>新聞管理</a><span>more</span>
                         <ul class="dropdown">
-                            <li><a href="#">內容管理</a></li>
-                            <li><a href="#">類別管理</a></li>
-                            <li><a href="#">搜尋</a></li>
+                            <li><a href="../news/list.htm">內容管理</a></li>
                         </ul>
                     </li>
-
-                    <li><a href="#"><i class="fas fa-envelope"></i>聯絡表單設定</a><span>more</span>
+                    <li><a href="#"><i class="fas fa-file-alt"></i>部落格管理</a><span>more</span>
                         <ul class="dropdown">
-                            <li><a href="#">表單管理</a></li>
-                            <li><a href="#">問題類別</a></li>
-                            <li><a href="#">系統信設定</a></li>
-                            <li><a href="#">搜尋</a></li>
+                            <li><a href="../blog/list.htm">內容管理</a></li>
+                            <li><a href="../blog/cata-list.htm">類別管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i>常見問題管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../faq/list.htm">內容管理</a></li>
+                            <li><a href="../faq/cata-list.htm">類別管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-envelope"></i>聯絡表單管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../contact/list.htm">表單管理</a></li>
+                            <li><a href="../contact/cata_list.htm">問題類別</a></li>
+                            <li><a href="../contact/mail_setting.htm">系統信設定</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-user"></i>會員管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../member/list.htm">會員列表</a></li>
+                            <li><a href="../member/search.htm">會員查詢</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -90,7 +107,74 @@
             <!--主要內容-->
             <p>Welcome to the Secure Access Web Management System, 啾囍管理者.</p>
             <div class="panel">
-                <div class="panelBody bt-wrapper">
+                <div class="panelBody">
+                    <h2>最新訂單</h2>
+                    <div class="rwdTable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>時間</th>
+                                    <th>訂單編號</th>
+                                    <th>訂購者</th>
+                                    <th>訂單金額</th>
+                                    <th>付款狀態</th>
+                                    <th>出貨狀態</th>
+                                    <th>訂單內容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2018-05-08</td>
+                                    <td>aa0001</td>
+                                    <td>郭庭羽</td>
+                                    <td>$350</td>
+                                    <td>付款完成</td>
+                                    <td>運送中</td>
+                                    <td><a class="btn" href="../order/edit.html">詳細內容</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2018-05-08</td>
+                                    <td>aa0001</td>
+                                    <td>謝宗哲</td>
+                                    <td>$350</td>
+                                    <td>付款完成</td>
+                                    <td>已出貨</td>
+                                    <td><a class="btn" href="../order/edit.html">詳細內容</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2018-05-08</td>
+                                    <td>aa0001</td>
+                                    <td>美人羽</td>
+                                    <td>$350</td>
+                                    <td>付款完成</td>
+                                    <td>已出貨</td>
+                                    <td><a class="btn" href="../order/edit.html">詳細內容</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2018-05-08</td>
+                                    <td>aa0001</td>
+                                    <td>葉教授</td>
+                                    <td>$350</td>
+                                    <td>尚未付款</td>
+                                    <td>尚未出貨</td>
+                                    <td><a class="btn" href="../order/edit.html">詳細內容</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2018-05-08</td>
+                                    <td>aa0001</td>
+                                    <td>陳曉明</td>
+                                    <td>$350</td>
+                                    <td>尚未付款</td>
+                                    <td>尚未出貨</td>
+                                    <td><a class="btn" href="../order/edit.html">詳細內容</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panelBody">
                     <h2>最新線上客服</h2>
                     <div class="rwdTable">
                         <table>
@@ -150,16 +234,7 @@
                     </div>
                 </div>
             </div>
-            <div class="panel">
-                <div class="panelBody col50p">
-                    <h2>商品購買統計</h2>
-                    <div id="chartContainer01" class="chart"></div>
-                </div>
-                <div class="panelBody col50p">
-                    <h2>每月新進會員人數</h2>
-                    <div id="chartContainer02" class="chart"></div>
-                </div>
-            </div>
+
             <!--主要內容 end-->
             <!--footer 拆成共用-->
             <footer>©CHU.C 啾囍 All Rights Reserved.</footer>
@@ -171,116 +246,7 @@
     <!--[if lt IE 8]><script type="text/javascript" src="../js/html5.js"></script><![endif]-->
     <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="../js/SmoothScroll_v1.2.1.js"></script>
-    <script type="text/javascript" src="../js/jquery.basictable.min.js"></script>
-    <script src="../js/canvasjs.min.js"></script>
     <script type="text/javascript" src="../js/share.js"></script>
-    <script>
-        window.onload = function() {
-            CanvasJS.addColorSet("customColor", ["#ffa9ac", "#f4d3a0", "#86ac7f", "#5da7a7", "#8994ba"]);
-            var chart01 = new CanvasJS.Chart("chartContainer01", {
-                exportEnabled: false,
-                animationEnabled: true,
-                colorSet: "customColor",
-                title: {
-                    text: "",
-                    fontFamily: "微軟正黑體",
-                },
-                legend: {
-                    cursor: "pointer",
-                    fontFamily: "微軟正黑體",
-                },
-                data: [{
-                    type: "doughnut",
-                    showInLegend: true,
-                    toolTipContent: "{name}: <strong>{y}%</strong>",
-                    indexLabel: "{name} - {y}%",
-                    indexLabelFontFamily: "微軟正黑體",
-                    dataPoints: [{
-                        y: 26,
-                        name: "蕾絲浪漫乾燥花耳環222 "
-                    }, {
-                        y: 20,
-                        name: "花現幸福乾燥花項鍊"
-                    }, {
-                        y: 5,
-                        name: "奇幻夢境乾燥花項鍊"
-                    }, {
-                        y: 3,
-                        name: "幸福降臨乾燥花耳環"
-                    }, {
-                        y: 7,
-                        name: "花間精靈乾燥花耳環"
-                    }, ]
-                }]
-            });
-            chart01.render();
-            var chart02 = new CanvasJS.Chart("chartContainer02", {
-                colorSet: "customColor",
-                animationEnabled: true,
-                title: {
-                    text: "",
-                    fontFamily: "微軟正黑體",
-                },
-                axisY: {
-                    title: "人數",
-                    titleFontSize: 12,
-                    titleFontFamily: "微軟正黑體",
-                    titleFontWeight: "normal",
-                },
-                legend: {
-                    verticalAlign: "bottom",
-                    horizontalAlign: "center",
-                    fontFamily: "微軟正黑體",
-                },
-                data: [{
-                    type: "column",
-                    showInLegend: true,
-                    legendMarkerColor: "grey",
-                    legendText: "108/月",
-                    labelFontFamily: "微軟正黑體",
-                    dataPoints: [{
-                        y: 12,
-                        label: "1月"
-                    }, {
-                        y: 18,
-                        label: "2月"
-                    }, {
-                        y: 22,
-                        label: "3月"
-                    }, {
-                        y: 35,
-                        label: "4月"
-                    }, {
-                        y: 17,
-                        label: "5月"
-                    }, {
-                        y: 50,
-                        label: "6月"
-                    }, {
-                        y: 43,
-                        label: "7月"
-                    }, {
-                        y: 38,
-                        label: "8月"
-                    }, {
-                        y: 25,
-                        label: "9月"
-                    }, {
-                        y: 16,
-                        label: "10月"
-                    }, {
-                        y: 30,
-                        label: "11月"
-                    }, {
-                        y: 50,
-                        label: "12月"
-                    }, ]
-                }]
-            });
-            chart02.render();
-        }
-
-    </script>
 </body>
 
 </html>

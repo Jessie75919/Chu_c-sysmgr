@@ -53,33 +53,51 @@
                     <!--所在的類別li要加上class="active"-->
                     <li><a href="#"><i class="fas fa-home"></i>首頁管理</a><span>more</span>
                         <ul class="dropdown">
-                            <li><a href="#">首頁主圖管理</a></li>
+                            <li><a href="../homepage/list.htm">首頁主圖管理</a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><i class="fas fa-image"></i>單元主圖管理</a><span>more</span>
-                        <ul class="dropdown">
-                            <li><a href="#">圖片列表</a></li>
-                        </ul>
-                    </li>
+                    
                     <li class="active"><a href="#"><i class="fas fa-shopping-cart"></i>商品管理</a><span>more</span>
                         <ul class="dropdown">
                             <li><a href="../product/list.htm">內容管理</a></li>
                             <li><a class="on" href="../product/cata-list.htm">類別管理</a></li>
+                            <li><a href="../product/notice-edit.htm">貼心提醒管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i>購物管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../order/list.htm">訂單列表</a></li>
+                            <li><a href="../order/shipping-list.htm">物流設定</a></li>
                         </ul>
                     </li>
                     <li><a href="#"><i class="fas fa-newspaper"></i>新聞管理</a><span>more</span>
                         <ul class="dropdown">
-                            <li><a href="#">內容管理</a></li>
-                            <li><a href="#">類別管理</a></li>
-                            <li><a href="#">搜尋</a></li>
+                            <li><a href="../news/list.htm">內容管理</a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><i class="fas fa-envelope"></i>聯絡表單設定</a><span>more</span>
+                    <li><a href="#"><i class="fas fa-file-alt"></i>部落格管理</a><span>more</span>
                         <ul class="dropdown">
-                            <li><a href="#">表單管理</a></li>
-                            <li><a href="#">問題類別</a></li>
-                            <li><a href="#">系統信設定</a></li>
-                            <li><a href="#">搜尋</a></li>
+                            <li><a href="../blog/list.htm">內容管理</a></li>
+                            <li><a href="../blog/cata-list.htm">類別管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i>常見問題管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../faq/list.htm">內容管理</a></li>
+                            <li><a href="../faq/cata-list.htm">類別管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-envelope"></i>聯絡表單管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../contact/list.htm">表單管理</a></li>
+                            <li><a href="../contact/cata_list.htm">問題類別</a></li>
+                            <li><a href="../contact/mail_setting.htm">系統信設定</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-user"></i>會員管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../member/list.htm">會員列表</a></li>
+                            <li><a href="../member/search.htm">會員查詢</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -91,7 +109,7 @@
             <!--主要內容-->
             <h1>商品管理<span> / 新增商品類別</span></h1>
             <div class="panel">
-                <div class="panelBody bt-wrapper">
+                <div class="panelBody">
                     <h2>基本資料</h2>
                     <!--編輯按鈕區塊-->
                     <div class="editListBtn start">
@@ -99,7 +117,7 @@
                         <a href="#"><i class="fas fa-edit"></i>確認新增</a></div>
                     <!--編輯按鈕區塊 end-->
                     <!--新增商品資訊-->
-                    <form action="list.htm" method="post" id="formcontent">
+                    <form action="cata-list.htm" method="post" id="formcontent">
                         <div class="formList">
                             <div class="formName">類別名稱<span class="mark">*</span></div>
                             <div class="formInfo">

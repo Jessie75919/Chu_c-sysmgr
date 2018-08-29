@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>網站管理系統</title>
+    <link rel="SHORTCUT ICON" href="../images/share/favicon.ico" />
+    <link rel="icon" href="../images/share/favicon.ico" type="image/ico" />
+    <!--css-->
+    <link href="../css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/default.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!--header 拆成共用-->
+    <header>
+        <figure class="logo">
+            <a href="../index/index.htm"><img src="../images/share/logo.svg" alt="CHU.C" title="CHU.C"></a>
+        </figure>
+        <div class="open"><i class="fas fa-bars" title="MENU"></i></div>
+        <!--上方選單-->
+        <div class="headerRight">
+            <ul>
+                <li class="account"><a href="#" title="帳號"><i class="fas fa-user-circle"></i><span>Jackie Kuo<i class="fas fa-angle-down"></i></span></a>
+                    <ul>
+                        <li><a href="../account/account.htm" target="_blank">我的帳號</a></li>
+                        <li><a href="../admin/list.htm">帳號管理</a></li>
+                        <li><a href="#">登出<i class="fas fa-sign-out-alt"></i></a></li>
+                    </ul>
+                </li>
+                <li class="language"><a href="#" title="語言"><i class="fas fa-globe"></i><span>繁中<i class="fas fa-angle-down"></i></span></a>
+                    <ul>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">日本語</a></li>
+                    </ul>
+                </li>
+                <li><a href="../contact/list.htm"><i class="fas fa-envelope"></i><span class="remind">10</span></a></li>
+            </ul>
+        </div>
+        <!--上方選單 end-->
+    </header>
+    <!--header end-->
+    <main>
+        <!--側邊攔 拆成共用-->
+        <aside class="start">
+            <nav>
+                <p>常用單元</p>
+                <ul>
+                    <!--所在的類別li要加上class="active"-->
+                    <li><a href="#"><i class="fas fa-home"></i>首頁管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../homepage/list.htm">首頁主圖管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i>商品管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../product/list.htm">內容管理</a></li>
+                            <li><a href="../product/cata-list.htm">類別管理</a></li>
+                            <li><a href="../product/notice-edit.htm">貼心提醒管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="active"><a href="#"><i class="fas fa-shopping-cart"></i>購物管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a class="on" href="../order/list.htm">訂單列表</a></li>
+                            <li><a href="../order/shipping-list.htm">物流設定</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-newspaper"></i>新聞管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../news/list.htm">內容管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i>部落格管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../blog/list.htm">內容管理</a></li>
+                            <li><a href="../blog/cata-list.htm">類別管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i>常見問題管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../faq/list.htm">內容管理</a></li>
+                            <li><a href="../faq/cata-list.htm">類別管理</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-envelope"></i>聯絡表單管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../contact/list.htm">表單管理</a></li>
+                            <li><a href="../contact/cata_list.htm">問題類別</a></li>
+                            <li><a href="../contact/mail_setting.htm">系統信設定</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fas fa-user"></i>會員管理</a><span>more</span>
+                        <ul class="dropdown">
+                            <li><a href="../member/list.htm">會員列表</a></li>
+                            <li><a href="../member/search.htm">會員查詢</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="closeBg"></div>
+        <!--側邊攔 end-->
+
+        <div class="container start">
+            <!--主要內容-->
+            <h1>購物管理<span> / 訂單列表</span></h1>
+            <div class="panel">
+                <div class="panelBody">
+                    <h2>訂單一覽</h2>
+                    <!--編輯按鈕區塊-->
+                    <div class="editListBtn">
+                        <a href="#"><i class="fas fa-trash-alt"></i>刪除勾選</a>
+                    </div>
+                    <!--編輯按鈕區塊 end-->
+                    <!--搜尋商品狀態-->
+                    <div class="stuts">
+                        <div class="stutsList">
+                            <span>訂單狀態</span>
+                            <select name="onlineStuts" id="onlineStuts">
+                                <option value="all">全部</option>
+                                <option value="0">新訂單</option>
+                                <option value="1">處理中</option>
+                                <option value="2">已取消</option>
+                                <option value="3">已出貨</option>
+                                <option value="4">取貨完成</option>
+                                <option value="5">退貨</option>
+                            </select>
+                        </div>
+                        <div class="stutsList">
+                            <span>付款狀態</span>
+                            <select name="onlineStuts" id="onlineStuts">
+                                <option value="0">全部</option>
+                                <option value="1">已付款</option>
+                                <option value="2">尚未付款</option>
+                                <option value="3">貨到付款</option>
+                                <option value="4">付款失敗</option>
+                                <option value="5">已退款</option>
+                            </select>
+                        </div>
+                        <div class="stutsList">
+                            <span>物流方式</span>
+                            <select name="onlineStuts" id="onlineStuts">
+                                <option value="0">全部</option>
+                                <option value="1">宅配</option>
+                                <option value="2">郵寄</option>
+                                <option value="3">7-11取貨</option>
+                                <option value="4">全家取貨</option>
+                            </select>
+                        </div>
+                        <div class="stutsList sendBtn">
+                            <input type="button" value="送出">
+                        </div>
+                    </div>
+                    <!--搜尋商品狀態 end-->
+                    <div class="rwdTable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>
+                                        <input id="checkbox" type="checkbox" name="checkbox">
+                                    </th>
+                                    <th>訂單編號</th>
+                                    <th>訂購人資料</th>
+                                    <th>收貨人資料</th>
+                                    <th>金額</th>
+                                    <th>訂單狀態</th>
+                                    <th>付款狀態</th>
+                                    <th>物流方式</th>
+                                    <th>訂單日期</th>
+                                    <th>功能</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--列表每頁5則-->
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <input id="checkbox" type="checkbox" name="checkbox">
+                                    </td>
+                                    <td>aa0003</td>
+                                    <td>
+                                        <p>庭羽</p>
+                                        <p>juicekuo@gmail.com</p>
+                                        <p>0922526182</p>
+                                    </td>
+                                    <td>
+                                        <p>庭羽</p>
+                                        <p>juicekuo@gmail.com</p>
+                                        <p>0922526182</p>
+                                    </td>
+                                    <td>350</td>
+                                    <td>新訂單</td>
+                                    <td>尚未付款</td>
+                                    <td>宅配</td>
+                                    <td>2018-08-15</td>
+                                    <td>
+                                        <a class="btn circle" href="edit.htm" title="訂單內容"><i class="fas fa-edit"></i></a>
+                                        <a class="btn circle" href="#" title="刪除"><i class="fas fa-trash-alt"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <input id="checkbox" type="checkbox" name="checkbox">
+                                    </td>
+                                    <td>aa0003</td>
+                                    <td>
+                                        <p>謝大便</p>
+                                        <p>jessie75919@gmail.com</p>
+                                        <p>0919132237</p>
+                                    </td>
+                                    <td>
+                                        <p>郭果汁</p>
+                                        <p>juicekuo@gmail.com</p>
+                                        <p>0922526182</p>
+                                    </td>
+                                    <td>350</td>
+                                    <td>已出貨</td>
+                                    <td>已付款</td>
+                                    <td>7-11取貨</td>
+                                    <td>2018-08-13</td>
+                                    <td>
+                                        <a class="btn circle" href="edit.htm" title="訂單內容"><i class="fas fa-edit"></i></a>
+                                        <a class="btn circle" href="#" title="刪除"><i class="fas fa-trash-alt"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <input id="checkbox" type="checkbox" name="checkbox">
+                                    </td>
+                                    <td>aa0003</td>
+                                    <td>
+                                        <p>小巨蜥</p>
+                                        <p>jessie75919@gmail.com</p>
+                                        <p>0919132237</p>
+                                    </td>
+                                    <td>
+                                        <p>迅猛龍</p>
+                                        <p>juicekuo@gmail.com</p>
+                                        <p>0922526182</p>
+                                    </td>
+                                    <td>350</td>
+                                    <td>取貨完成</td>
+                                    <td>已付款</td>
+                                    <td>郵寄</td>
+                                    <td>2018-08-10</td>
+                                    <td>
+                                        <a class="btn circle" href="edit.htm" title="訂單內容"><i class="fas fa-edit"></i></a>
+                                        <a class="btn circle" href="#" title="刪除"><i class="fas fa-trash-alt"></i></a>
+                                    </td>
+                                </tr>
+                                <!--列表每頁5則 end-->
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--頁碼-->
+                    <div class="page">
+                        <p>共 2 頁 / 總共 16 筆記錄</p>
+                        <p>
+                            <a href="#"><i class="fas fa-angle-left"></i></a>
+                            <a href="#">1</a><a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                            <a href="#"><i class="fas fa-angle-right"></i></a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--主要內容 end-->
+            <!--footer 拆成共用-->
+            <footer>©CHU.C 啾囍 All Rights Reserved.</footer>
+            <!--footer end-->
+            <!--main js-->
+        </div>
+    </main>
+
+    <!--[if lt IE 8]><script type="text/javascript" src="../js/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/SmoothScroll_v1.2.1.js"></script>
+    <script type="text/javascript" src="../js/share.js"></script>
+</body>
+
+</html>
